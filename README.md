@@ -1,6 +1,32 @@
 # Books Management System
 
-Система управления книгами на Spring Boot с REST API.
+## Скриншоты рабочих API
+
+- GET `/api/books` (200):
+  
+  ![GET /api/books](docs/screenshots/get-books.png)
+
+- POST `/api/books` (201):
+  
+  ![POST /api/books](docs/screenshots/post-book.png)
+
+- GET `/api/books/{id}` (200/404):
+  
+  ![GET /api/books/{id} 200](docs/screenshots/get-book-by-id-200.png)
+  
+  ![GET /api/books/{id} 404](docs/screenshots/get-book-by-id-404.png)
+
+- PUT `/api/books/{id}` (200):
+  
+  ![PUT /api/books/{id}](docs/screenshots/put-book.png)
+
+- DELETE `/api/books/{id}` (204):
+  
+  ![DELETE /api/books/{id}](docs/screenshots/delete-book.png)
+
+- POST `/api/books` c невалидными данными (400):
+  
+  ![POST /api/books 400](docs/screenshots/post-book-400.png)
 
 ## Технологии
 
