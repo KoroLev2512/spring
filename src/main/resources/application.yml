@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: books
+  
+  # Database Configuration
+  datasource:
+    # H2 Database (for development)
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+    
+    # PostgreSQL Database (for production)
+    # url: jdbc:postgresql://localhost:5432/books_db
+    # driver-class-name: org.postgresql.Driver
+    # username: postgres
+    # password: password
+  
+  # JPA Configuration
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+  
+  # H2 Console (for development)
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+# Server Configuration
+server:
+  port: 8080
+
+# Logging Configuration
+logging:
+  level:
+    com.example.books: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
